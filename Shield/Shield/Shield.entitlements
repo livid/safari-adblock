@@ -10,5 +10,10 @@
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER)-spks</string>
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER)-spki</string>
 	</array>
+	<!-- Where the Safari extension leaves the totals the window shows (see StatusView.swift). -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>66KP7KX9MX.io.github.livid.Shield</string>
+	</array>
 </dict>
 </plist>

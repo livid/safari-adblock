@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "Shield – Ad & Threat Blocker"
+  },
+  "extDescription": {
+    "message": "Blocks ads, trackers, cryptominers, and known malware and phishing sites."
+  },
+  "totalsHint": {
+    "message": "Totals since install. Data saved is an estimate from typical sizes of the kinds of files stopped; Safari doesn't report the size of a request that never loads."
+  },
+  "stopped": {
+    "message": "stopped"
+  },
+  "saved": {
+    "message": "saved"
+  },
+  "siteToggleHint": {
+    "message": "Block ads on this site"
+  },
+  "blockedOnPage": {
+    "message": "requests blocked on this page"
+  },
+  "settingAds": {
+    "message": "Block ads & trackers"
+  },
+  "settingThreats": {
+    "message": "Block malware, phishing & miners"
+  },
+  "settingCosmetic": {
+    "message": "Hide ad elements on pages"
+  },
+  "updateLists": {
+    "message": "Update lists"
+  },
+  "updating": {
+    "message": "Updating…"
+  },
+  "justNow": {
+    "message": "just now"
+  },
+  "minutesAgo": {
+    "message": "{0} min ago"
+  },
+  "hoursAgo": {
+    "message": "{0} h ago"
+  },
+  "daysAgo": {
+    "message": "{0} days ago"
+  },
+  "listsFailed": {
+    "message": "Couldn't download lists. Built-in rules active."
+  },
+  "listsDownloading": {
+    "message": "Downloading lists…"
+  },
+  "listsSummary": {
+    "message": "{0} domains listed · updated {1}"
+  },
+  "listsSomeFailed": {
+    "message": "some lists failed to update"
+  },
+  "listsSkipped": {
+    "message": "{0} over Safari's rule limit"
+  },
+  "protectionOn": {
+    "message": "Protection is on"
+  },
+  "sitePaused": {
+    "message": "Ad blocking paused on this site"
+  },
+  "thisPage": {
+    "message": "This page"
+  },
+  "browserPage": {
+    "message": "Shield doesn't run on browser pages"
+  },
+  "applying": {
+    "message": "Applying… Safari can take up to a minute"
+  },
+  "blockedTitle": {
+    "message": "Dangerous site blocked"
+  },
+  "blockedBody": {
+    "message": "Shield stopped this page from loading because its address is on a list of sites that spread malware, steal passwords, or hijack your computer to mine cryptocurrency."
+  },
+  "blockedAdvice": {
+    "message": "If you got here from a link in an email or message, the safest choice is to go back."
+  },
+  "goBack": {
+    "message": "Go back"
+  },
+  "openAnyway": {
+    "message": "Open the site anyway"
+  },
+  "unknownAddress": {
+    "message": "Unknown address"
+  },
+  "opening": {
+    "message": "Opening… Safari can take up to a minute to update its rules."
+  },
+  "openFailed": {
+    "message": "Couldn't open the site. Try again."
+  }
+}

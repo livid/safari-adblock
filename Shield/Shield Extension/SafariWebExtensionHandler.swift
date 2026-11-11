@@ -2,41 +2,42 @@
 //  SafariWebExtensionHandler.swift
 //  Shield Extension
 //
-//  Created by Xcode Bot on 11/10/26.
+//  Receives the extension's reports (background.js, reportToApp) and stores them where the
+//  Shield app can read them for its window.
 //
 
 import SafariServices
-import os.log
+
+/// The app group shared with the Shield app. Same name as in StatusView.swift and in both
+/// targets' entitlements.
+let sharedSuiteName = "66KP7KX9MX.io.github.livid.Shield"
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
         let request = context.inputItems.first as? NSExtensionItem
+        let message = request?.userInfo?[SFExtensionMessageKey] as? [String: Any]
+        // Each Safari profile runs its own copy of the extension, with its own totals and
+        // website access, so reports are kept per profile.
+        let profile = (request?.userInfo?[SFExtensionProfileKey] as? UUID)?.uuidString ?? "default"
 
-        let profile: UUID?
-        if #available(iOS 17.0, macOS 14.0, *) {
-            profile = request?.userInfo?[SFExtensionProfileKey] as? UUID
-        } else {
-            profile = request?.userInfo?["profile"] as? UUID
+        var stored = false
+        if message?["type"] as? String == "report", let shared = UserDefaults(suiteName: sharedSuiteName) {
+            let stats = message?["stats"] as? [String: Any]
+            var reports = shared.dictionary(forKey: "reports") ?? [:]
+            reports[profile] = [
+                "blocked": (stats?["blocked"] as? NSNumber)?.intValue ?? 0,
+                "bytes": (stats?["bytes"] as? NSNumber)?.intValue ?? 0,
+                "allSites": message?["allSites"] as? Bool ?? false,
+                "updated": Date(),
+            ]
+            shared.set(reports, forKey: "reports")
+            stored = true
         }
-
-        let message: Any?
-        if #available(iOS 15.0, macOS 11.0, *) {
-            message = request?.userInfo?[SFExtensionMessageKey]
-        } else {
-            message = request?.userInfo?["message"]
-        }
-
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
 
         let response = NSExtensionItem()
-        if #available(iOS 15.0, macOS 11.0, *) {
-            response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
-        } else {
-            response.userInfo = [ "message": [ "echo": message ] ]
-        }
-
-        context.completeRequest(returningItems: [ response ], completionHandler: nil)
+        response.userInfo = [SFExtensionMessageKey: ["ok": stored]]
+        context.completeRequest(returningItems: [response], completionHandler: nil)
     }
 
 }

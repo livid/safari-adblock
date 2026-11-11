@@ -1,3 +1,4 @@
+// t() comes from i18n.js.
 const DEFAULT_SETTINGS = { ads: true, threats: true, cosmetic: true };
 const $ = (id) => document.getElementById(id);
 
@@ -12,10 +13,10 @@ async function getState() {
 
 function ago(ts) {
   const min = Math.round((Date.now() - ts) / 60000);
-  if (min < 1) return "just now";
-  if (min < 60) return `${min} min ago`;
+  if (min < 1) return t("justNow");
+  if (min < 60) return t("minutesAgo", min);
   const h = Math.round(min / 60);
-  return h < 48 ? `${h} h ago` : `${Math.round(h / 24)} days ago`;
+  return h < 48 ? t("hoursAgo", h) : t("daysAgo", Math.round(h / 24));
 }
 
 function renderLists(feeds, skipped) {
@@ -25,12 +26,12 @@ function renderLists(feeds, skipped) {
   const failed = list.some((f) => f.error);
   const el = $("lists");
   if (!newest) {
-    el.textContent = failed ? "Couldn't download lists. Built-in rules active." : "Downloading lists…";
+    el.textContent = failed ? t("listsFailed") : t("listsDownloading");
   } else {
-    el.textContent = `${total.toLocaleString()} domains listed · updated ${ago(newest)}`;
-    if (failed) el.textContent += " · some lists failed to update";
+    el.textContent = t("listsSummary", total.toLocaleString(), ago(newest));
+    if (failed) el.textContent += " · " + t("listsSomeFailed");
     // Safari caps an extension's rules; the bundled lists come first.
-    if (skipped > 0) el.textContent += ` · ${skipped.toLocaleString()} over Safari's rule limit`;
+    if (skipped > 0) el.textContent += " · " + t("listsSkipped", skipped.toLocaleString());
   }
   el.classList.toggle("error", failed);
 }
@@ -58,11 +59,11 @@ async function render() {
     const paused = allowlist.includes(host);
     $("host").textContent = host;
     siteToggle.checked = !paused;
-    $("status").textContent = paused ? "Ad blocking paused on this site" : "Protection is on";
+    $("status").textContent = paused ? t("sitePaused") : t("protectionOn");
     $("status").classList.toggle("paused", paused);
   } else {
-    $("host").textContent = "This page";
-    $("status").textContent = "Shield doesn't run on browser pages";
+    $("host").textContent = t("thisPage");
+    $("status").textContent = t("browserPage");
     siteToggle.checked = false;
     siteToggle.disabled = true;
   }
@@ -130,7 +131,7 @@ async function init() {
     // Safari recompiles every rule for this, which can take it up to a minute; reload once
     // it's done so the change shows.
     $("siteToggle").disabled = true;
-    $("status").textContent = "Applying… Safari can take up to a minute";
+    $("status").textContent = t("applying");
     await applied;
     $("siteToggle").disabled = false;
     await render();
@@ -148,10 +149,10 @@ async function init() {
   $("update").addEventListener("click", async () => {
     const btn = $("update");
     btn.disabled = true;
-    btn.textContent = "Updating…";
+    btn.textContent = t("updating");
     await chrome.runtime.sendMessage({ type: "update-feeds" }).catch(() => {});
     btn.disabled = false;
-    btn.textContent = "Update lists";
+    btn.textContent = t("updateLists");
     await render();
   });
 

@@ -7,7 +7,7 @@ Requires Safari 18 or later on macOS 14 or later.
 ## Install
 
 1. Download `Shield-<version>.zip` from [Releases](https://github.com/livid/safari-adblock/releases/latest), unzip it, and move **Shield** to Applications. The app is notarized by Apple.
-2. Open Shield and click "Quit and Open Safari Settings…". Turn on **Shield** and set "Allow on every website".
+2. Open Shield and click "Open Safari Settings…". Turn on **Shield**, then click "Edit Websites…" and set "When visiting other websites" to Allow. The Shield window reminds you until that's done, and shows the lifetime totals.
 
 Shield checks for updates when you open the app, and daily while it stays open. You can also choose Shield → Check for Updates…. Updates come from this repository's releases, signed with Shield's own update key.
 
@@ -69,8 +69,18 @@ These were measured on Safari 27.2 (in Safari itself, and with WebKit's own rule
 - **No redirects for page loads.** Safari ignores redirect rules for top-level navigations: extension paths, plain URLs and query rewrites alike. It also drops `requestDomains` from any rule that has a `regexFilter`, which would turn the Chrome version's warning-page rule into "redirect every site". So Shield blocks dangerous sites outright (all request types, one rule per domain) and sends the tab to the warning page itself. The page gets the address in its fragment and has the background confirm it's on a threat list.
 - **No tracking-parameter stripping.** That feature was built entirely on page-load redirects, so it's gone from the Safari version, and so is its toggle. Safari's own Settings → Advanced → "Use advanced tracking and fingerprinting protection" in all browsing removes known tracking parameters.
 - **Lifetime totals** come from `getMatchedRules`, which in Safari lists blocked requests with only an address, tab and time. The background adds them up from a stored position whenever a page finishes loading, a tab closes or the popup opens, and once more a minute after the last page load. Since Safari doesn't say what kind of request was blocked, "data saved" is estimated from each address's file extension.
+- **The app window gets its numbers from the extension.** The app can't read the extension's storage, so the background sends the totals, and whether Shield is allowed on every website, through native messaging (`reportToApp` in `background.js`). `SafariWebExtensionHandler.swift` stores them in the app group `66KP7KX9MX.io.github.livid.Shield`, one report per Safari profile, and the window (`StatusView.swift`) reads them every two seconds.
 - **Resource types `object` and `webtransport` don't exist in Safari.** A rule listing only those is invalid, so they're never emitted. The committed rules came from the Chrome build with those types stripped. Rerunning `tools/build-rules.mjs` produces the same thing directly, and also evaluates list `!#if` blocks as `env_safari` instead of `env_chromium`.
 
 Problems show up in the extension's background console (Develop → Web Extension Background Content → Shield) as `Shield:` warnings, and in Safari's log under `com.apple.WebKit:Extensions`.
+
+## Languages
+
+English, Simplified Chinese, Traditional Chinese and Japanese.
+
+- **App:** window text is in `Shield/Shield/Localizable.xcstrings`, the menu bar in `Shield/Shield/<language>.lproj/Main.strings`.
+- **Extension:** `extension/_locales/<language>/messages.json`. Pages mark elements with `data-i18n`, and scripts call `t()` from `i18n.js`. `zh` is Simplified. `zh_TW` and `zh_HK` are Traditional and must stay identical (Safari picks by region, and has no single name for Traditional).
+
+The steps in the app's reminder quote Safari's own labels ("Edit Websites…", "When visiting other websites") in each language, copied from Safari 27.2.
 
 See [NOTICE.md](NOTICE.md) for list sources and licenses.

@@ -9,9 +9,9 @@
   <header>
     <img src="icons/icon48.png" width="28" height="28" alt="">
     <h1>Shield</h1>
-    <div id="totals" class="totals" title="Totals since install. Data saved is an estimate from typical sizes of the kinds of files stopped; Safari doesn't report the size of a request that never loads.">
-      <div><b id="totalBlocked">0</b> stopped</div>
-      <div><b id="totalSaved">0 KB</b> saved</div>
+    <div id="totals" class="totals" data-i18n-title="totalsHint" title="Totals since install. Data saved is an estimate from typical sizes of the kinds of files stopped; Safari doesn't report the size of a request that never loads.">
+      <div><b id="totalBlocked">0</b> <span data-i18n="stopped">stopped</span></div>
+      <div><b id="totalSaved">0 KB</b> <span data-i18n="saved">saved</span></div>
     </div>
   </header>
 
@@ -20,7 +20,7 @@
       <div id="host" class="host">–</div>
       <div id="status" class="status"></div>
     </div>
-    <label class="switch big" title="Block ads on this site">
+    <label class="switch big" data-i18n-title="siteToggleHint" title="Block ads on this site">
       <input type="checkbox" id="siteToggle">
       <span></span>
     </label>
@@ -28,29 +28,30 @@
 
   <section id="countBox" class="count">
     <span id="count">0</span>
-    <small>requests blocked on this page</small>
+    <small data-i18n="blockedOnPage">requests blocked on this page</small>
   </section>
 
   <section class="settings">
     <label class="row">
-      <span>Block ads &amp; trackers</span>
+      <span data-i18n="settingAds">Block ads &amp; trackers</span>
       <span class="switch"><input type="checkbox" data-setting="ads"><span></span></span>
     </label>
     <label class="row">
-      <span>Block malware, phishing &amp; miners</span>
+      <span data-i18n="settingThreats">Block malware, phishing &amp; miners</span>
       <span class="switch"><input type="checkbox" data-setting="threats"><span></span></span>
     </label>
     <label class="row">
-      <span>Hide ad elements on pages</span>
+      <span data-i18n="settingCosmetic">Hide ad elements on pages</span>
       <span class="switch"><input type="checkbox" data-setting="cosmetic"><span></span></span>
     </label>
   </section>
 
   <footer>
     <div id="lists" class="lists"></div>
-    <button id="update" type="button">Update lists</button>
+    <button id="update" type="button" data-i18n="updateLists">Update lists</button>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

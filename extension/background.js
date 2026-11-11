@@ -405,6 +405,7 @@ async function doCollectTotals() {
     stats: { blocked, bytes },
     statsCursor: { at: newest, seen: newest === statsCursor.at ? [...seen, ...atNewest] : atNewest },
   });
+  reportToApp();
   return fresh.length;
 }
 
@@ -418,6 +419,29 @@ chrome.webNavigation.onCompleted.addListener(
   { url: [{ schemes: ["http", "https"] }] }
 );
 chrome.tabs.onRemoved.addListener(() => collectTotals());
+
+// ---- what the Shield app shows in its window
+//
+// The app can't read this extension's storage, so the totals are sent to it through Safari's
+// native messaging, along with whether Shield is allowed on every website (the app reminds
+// people who haven't done that). SafariWebExtensionHandler.swift stores what arrives here.
+
+async function reportToApp() {
+  try {
+    const [{ stats }, allSites] = await Promise.all([
+      chrome.storage.local.get({ stats: { blocked: 0, bytes: 0 } }),
+      chrome.permissions.contains({ origins: ["*://*/*"] }),
+    ]);
+    // Safari delivers this to the app that contains the extension, whatever the name given.
+    await chrome.runtime.sendNativeMessage("io.github.livid.Shield", { type: "report", stats, allSites });
+  } catch (e) {
+    console.warn("Shield: couldn't report to the app", e);
+  }
+}
+
+chrome.permissions.onAdded.addListener(reportToApp);
+chrome.permissions.onRemoved.addListener(reportToApp);
+reportToApp(); // each time the worker starts
 
 // ---- feeds and lifecycle
 

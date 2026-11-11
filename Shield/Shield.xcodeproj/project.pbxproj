@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1A5C0DE0000000000000011 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000010 /* StatusView.swift */; };
+		E1A5C0DE0000000000000013 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000012 /* Localizable.xcstrings */; };
+		E1A5C0DE0000000000000018 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000017 /* _locales */; };
+		E1A5C0DE000000000000001A /* i18n.js in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000019 /* i18n.js */; };
 		E1A5C0DE0000000000000003 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = E1A5C0DE0000000000000002 /* Sparkle */; };
 		D771865430A4326D0098AFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771865330A4326D0098AFFF /* AppDelegate.swift */; };
-		D771865830A4326D0098AFFF /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = D771865630A4326D0098AFFF /* Main.html */; };
-		D771865A30A4326D0098AFFF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D771865930A4326D0098AFFF /* Icon.png */; };
-		D771865C30A4326D0098AFFF /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = D771865B30A4326D0098AFFF /* Style.css */; };
-		D771865E30A4326D0098AFFF /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = D771865D30A4326D0098AFFF /* Script.js */; };
 		D771866030A4326D0098AFFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771865F30A4326D0098AFFF /* ViewController.swift */; };
 		D771866330A4326D0098AFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D771866130A4326D0098AFFF /* Main.storyboard */; };
 		D771866530A4326E0098AFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D771866430A4326E0098AFFF /* Assets.xcassets */; };
@@ -53,13 +53,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E1A5C0DE0000000000000010 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000012 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000014 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000015 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000016 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja"; path = "ja.lproj/Main.strings"; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000017 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = ../../extension/_locales; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000019 /* i18n.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = i18n.js; path = ../../extension/i18n.js; sourceTree = "<group>"; };
+		E1A5C0DE000000000000001B /* Shield Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shield Extension.entitlements"; sourceTree = "<group>"; };
 		E1A5C0DE0000000000000004 /* Shield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shield.entitlements; sourceTree = "<group>"; };
 		D771865030A4326D0098AFFF /* Shield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D771865330A4326D0098AFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D771865730A4326D0098AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
-		D771865930A4326D0098AFFF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		D771865B30A4326D0098AFFF /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		D771865D30A4326D0098AFFF /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		D771865F30A4326D0098AFFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D771866230A4326D0098AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D771866430A4326E0098AFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,24 +121,14 @@
 			children = (
 				D771865330A4326D0098AFFF /* AppDelegate.swift */,
 				D771865F30A4326D0098AFFF /* ViewController.swift */,
+				E1A5C0DE0000000000000010 /* StatusView.swift */,
 				D771866130A4326D0098AFFF /* Main.storyboard */,
+				E1A5C0DE0000000000000012 /* Localizable.xcstrings */,
 				D771866430A4326E0098AFFF /* Assets.xcassets */,
 				D771866630A4326E0098AFFF /* Info.plist */,
 				E1A5C0DE0000000000000004 /* Shield.entitlements */,
-				D771865530A4326D0098AFFF /* Resources */,
 			);
 			path = Shield;
-			sourceTree = "<group>";
-		};
-		D771865530A4326D0098AFFF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D771865630A4326D0098AFFF /* Main.html */,
-				D771865930A4326D0098AFFF /* Icon.png */,
-				D771865B30A4326D0098AFFF /* Style.css */,
-				D771865D30A4326D0098AFFF /* Script.js */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		D771866F30A4326E0098AFFF /* Shield Extension */ = {
@@ -143,6 +137,7 @@
 				D771867C30A4326E0098AFFF /* Resources */,
 				D771867030A4326E0098AFFF /* SafariWebExtensionHandler.swift */,
 				D771867230A4326E0098AFFF /* Info.plist */,
+				E1A5C0DE000000000000001B /* Shield Extension.entitlements */,
 			);
 			path = "Shield Extension";
 			sourceTree = "<group>";
@@ -160,6 +155,8 @@
 				D771868430A4326E0098AFFF /* popup.css */,
 				D771868530A4326E0098AFFF /* blocked.html */,
 				D771868630A4326E0098AFFF /* cosmetic */,
+				E1A5C0DE0000000000000017 /* _locales */,
+				E1A5C0DE0000000000000019 /* i18n.js */,
 			);
 			name = Resources;
 			path = "Shield Extension";
@@ -229,6 +226,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = D771864730A4326D0098AFFF;
 			minimizedProjectReferenceProxies = 1;
@@ -250,12 +250,9 @@
 		D771864E30A4326D0098AFFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				D771865A30A4326D0098AFFF /* Icon.png in Resources */,
 				D771866330A4326D0098AFFF /* Main.storyboard in Resources */,
-				D771865E30A4326D0098AFFF /* Script.js in Resources */,
-				D771865830A4326D0098AFFF /* Main.html in Resources */,
+				E1A5C0DE0000000000000013 /* Localizable.xcstrings in Resources */,
 				D771866530A4326E0098AFFF /* Assets.xcassets in Resources */,
-				D771865C30A4326D0098AFFF /* Style.css in Resources */,
 			);
 		};
 		D771866930A4326E0098AFFF /* Resources */ = {
@@ -267,6 +264,8 @@
 				D771868930A4326E0098AFFF /* popup.html in Resources */,
 				D771868F30A4326E0098AFFF /* blocked.html in Resources */,
 				D771869030A4326E0098AFFF /* cosmetic in Resources */,
+				E1A5C0DE0000000000000018 /* _locales in Resources */,
+				E1A5C0DE000000000000001A /* i18n.js in Resources */,
 				D771868E30A4326E0098AFFF /* popup.css in Resources */,
 				D771868B30A4326E0098AFFF /* icons in Resources */,
 				D771868C30A4326E0098AFFF /* manifest.json in Resources */,
@@ -280,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			files = (
 				D771866030A4326D0098AFFF /* ViewController.swift in Sources */,
+				E1A5C0DE0000000000000011 /* StatusView.swift in Sources */,
 				D771865430A4326D0098AFFF /* AppDelegate.swift in Sources */,
 			);
 		};
@@ -300,18 +300,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D771865630A4326D0098AFFF /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D771865730A4326D0098AFFF /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
 		D771866130A4326D0098AFFF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D771866230A4326D0098AFFF /* Base */,
+				E1A5C0DE0000000000000014 /* zh-Hans */,
+				E1A5C0DE0000000000000015 /* zh-Hant */,
+				E1A5C0DE0000000000000016 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -447,6 +442,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				CODE_SIGN_ENTITLEMENTS = "Shield Extension/Shield Extension.entitlements";
 				INFOPLIST_FILE = "Shield Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -456,7 +452,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -482,6 +478,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				CODE_SIGN_ENTITLEMENTS = "Shield Extension/Shield Extension.entitlements";
 				INFOPLIST_FILE = "Shield Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -491,7 +488,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -533,12 +530,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,12 +573,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
 				PRODUCT_NAME = "$(TARGET_NAME)";

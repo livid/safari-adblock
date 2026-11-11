@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dangerous site blocked</title>
+  <title data-i18n="blockedTitle">Dangerous site blocked</title>
   <style>
     :root { color-scheme: light dark; --bg: #fdf3f2; --fg: #2a1512; --muted: #7a5a55; --card: #fff; --line: #f0d5d1; --danger: #c62828; }
     @media (prefers-color-scheme: dark) {
@@ -33,16 +33,17 @@
 </head>
 <body>
   <main>
-    <h1>Dangerous site blocked</h1>
-    <p>Shield stopped this page from loading because its address is on a list of sites that spread malware, steal passwords, or hijack your computer to mine cryptocurrency.</p>
+    <h1 data-i18n="blockedTitle">Dangerous site blocked</h1>
+    <p data-i18n="blockedBody">Shield stopped this page from loading because its address is on a list of sites that spread malware, steal passwords, or hijack your computer to mine cryptocurrency.</p>
     <div id="host" class="host"></div>
-    <p class="muted">If you got here from a link in an email or message, the safest choice is to go back.</p>
+    <p class="muted" data-i18n="blockedAdvice">If you got here from a link in an email or message, the safest choice is to go back.</p>
     <div class="actions">
-      <button id="back" type="button">Go back</button>
-      <button id="proceed" type="button">Open the site anyway</button>
+      <button id="back" type="button" data-i18n="goBack">Go back</button>
+      <button id="proceed" type="button" data-i18n="openAnyway">Open the site anyway</button>
     </div>
     <p id="note" class="muted" hidden></p>
   </main>
+  <script src="i18n.js"></script>
   <script src="blocked.js"></script>
 </body>
 </html>

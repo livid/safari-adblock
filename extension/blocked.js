@@ -1,5 +1,5 @@
 // The blocked address arrives in the URL fragment. The background confirms it is on a threat
-// list before the page names it or offers to go on.
+// list before the page names it or offers to go on. t() comes from i18n.js.
 
 const ALLOW_PRIORITY = 40; // above the threat rule's 30 in background.js
 // Same list as background.js. Safari rejects a rule that lists "object" or "webtransport".
@@ -14,7 +14,7 @@ const proceed = document.getElementById("proceed");
 const hostEl = document.getElementById("host");
 const note = document.getElementById("note");
 proceed.hidden = true;
-hostEl.textContent = "Unknown address";
+hostEl.textContent = t("unknownAddress");
 
 // No bypass when embedded in another page (clickjacking) or without a confirmed address.
 if (window.top === window) {
@@ -43,7 +43,7 @@ document.getElementById("back").addEventListener("click", async () => {
 // recompiles every rule for this, which can take longer than the background is kept running.
 proceed.addEventListener("click", async () => {
   proceed.disabled = true;
-  note.textContent = "Opening… Safari can take up to a minute to update its rules.";
+  note.textContent = t("opening");
   note.hidden = false;
   try {
     const dnr = chrome.declarativeNetRequest;
@@ -61,7 +61,7 @@ proceed.addEventListener("click", async () => {
     });
     location.replace(target.href);
   } catch {
-    note.textContent = "Couldn't open the site. Try again.";
+    note.textContent = t("openFailed");
     proceed.disabled = false;
   }
 });

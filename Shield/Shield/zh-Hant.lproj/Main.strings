@@ -1,0 +1,26 @@
+/* The app's menu bar (Base.lproj/Main.storyboard). */
+
+/* About Shield */
+"5kV-Vb-QxS.title" = "關於 Shield";
+
+/* Hide Shield */
+"Olw-nP-bQN.title" = "隱藏 Shield";
+
+/* Hide Others */
+"Vdr-fp-XzO.title" = "隱藏其他";
+
+/* Show All */
+"Kd2-mp-pUS.title" = "顯示全部";
+
+/* Quit Shield */
+"4sb-4s-VLi.title" = "結束 Shield";
+
+/* Help */
+"wpr-3q-Mcd.title" = "輔助說明";
+
+/* Help */
+"F2S-fz-NVQ.title" = "輔助說明";
+
+/* Shield Help */
+"FKE-Sm-Kum.title" = "Shield 輔助說明";
+

@@ -1,0 +1,270 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Allow Shield on every website": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのウェブサイトでShieldを許可する"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许 Shield 在所有网站上运行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允許 Shield 在所有網站上執行"
+          }
+        }
+      }
+    },
+    "Check for Updates…": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アップデートを確認…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查更新…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "檢查更新項目⋯"
+          }
+        }
+      }
+    },
+    "In Safari Settings → Extensions → Shield, click Edit Websites…, then set “When visiting other websites” to Allow. Until then Safari asks site by site, and Shield can’t hide ads on sites it hasn’t been allowed on.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Safariの設定 → 機能拡張 → Shieldで「ウェブサイトを編集…」をクリックし、「これ以外のウェブサイトでのデフォルト設定」を「許可」にします。それまではSafariがサイトごとに確認し、許可されていないサイトではShieldが広告を非表示にできません。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 设置 → 扩展 → Shield 中，点按“编辑网站…”，然后将“访问其他网站时”设为“允许”。在此之前，Safari 会逐个网站询问，Shield 也无法在未获允许的网站上隐藏广告。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 設定 → 延伸功能 → Shield 中，按一下「編輯網站⋯」，然後將「當參訪其他網站時」設為「允許」。在此之前，Safari 會逐一詢問每個網站，Shield 也無法在未獲允許的網站上隱藏廣告。"
+          }
+        }
+      }
+    },
+    "In Safari Settings → Extensions, select the checkbox next to Shield. Then click Edit Websites… and set “When visiting other websites” to Allow.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Safariの設定 → 機能拡張で、Shieldの横のチェックボックスを選択します。次に「ウェブサイトを編集…」をクリックし、「これ以外のウェブサイトでのデフォルト設定」を「許可」にします。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 设置 → 扩展中，勾选 Shield 旁边的复选框。然后点按“编辑网站…”，将“访问其他网站时”设为“允许”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 設定 → 延伸功能中，勾選 Shield 旁邊的註記框。然後按一下「編輯網站⋯」，將「當參訪其他網站時」設為「允許」。"
+          }
+        }
+      }
+    },
+    "Open Safari Settings…": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Safariの設定を開く…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开 Safari 设置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開 Safari 設定⋯"
+          }
+        }
+      }
+    },
+    "Shield is allowed on every website.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shieldはすべてのウェブサイトで許可されています。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 已获准在所有网站上运行。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 已獲准在所有網站上執行。"
+          }
+        }
+      }
+    },
+    "Shield is on in Safari.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ShieldはSafariでオンになっています。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 已在 Safari 中开启。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 已在 Safari 中開啟。"
+          }
+        }
+      }
+    },
+    "Shield is turned off in Safari.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ShieldはSafariでオフになっています。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 在 Safari 中处于关闭状态。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shield 在 Safari 中已關閉。"
+          }
+        }
+      }
+    },
+    "Totals since you installed Shield. Data saved is an estimate.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shieldをインストールしてからの合計です。節約したデータ量は推定値です。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自安装 Shield 以来的总计。节省的流量为估算值。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自安裝 Shield 以來的總計。節省的流量為估計值。"
+          }
+        }
+      }
+    },
+    "Turn on Shield in Safari": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SafariでShieldをオンにする"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 中开启 Shield"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Safari 中開啟 Shield"
+          }
+        }
+      }
+    },
+    "data saved": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "節約したデータ量"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已节省的流量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已節省的流量"
+          }
+        }
+      }
+    },
+    "requests blocked": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブロックしたリクエスト"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已拦截的请求"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已阻擋的請求"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

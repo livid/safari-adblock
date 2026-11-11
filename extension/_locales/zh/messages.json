@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "Shield – 广告与威胁拦截"
+  },
+  "extDescription": {
+    "message": "拦截广告、跟踪器、挖矿脚本，以及已知的恶意软件和钓鱼网站。"
+  },
+  "totalsHint": {
+    "message": "安装以来的总计。节省的流量是根据被拦截文件类型的典型大小估算的；Safari 不会报告未加载请求的大小。"
+  },
+  "stopped": {
+    "message": "次拦截"
+  },
+  "saved": {
+    "message": "已节省"
+  },
+  "siteToggleHint": {
+    "message": "在此网站上拦截广告"
+  },
+  "blockedOnPage": {
+    "message": "此页面上已拦截的请求"
+  },
+  "settingAds": {
+    "message": "拦截广告和跟踪器"
+  },
+  "settingThreats": {
+    "message": "拦截恶意软件、钓鱼网站和挖矿脚本"
+  },
+  "settingCosmetic": {
+    "message": "隐藏页面上的广告元素"
+  },
+  "updateLists": {
+    "message": "更新列表"
+  },
+  "updating": {
+    "message": "正在更新…"
+  },
+  "justNow": {
+    "message": "刚刚"
+  },
+  "minutesAgo": {
+    "message": "{0} 分钟前"
+  },
+  "hoursAgo": {
+    "message": "{0} 小时前"
+  },
+  "daysAgo": {
+    "message": "{0} 天前"
+  },
+  "listsFailed": {
+    "message": "无法下载列表。内置规则仍在生效。"
+  },
+  "listsDownloading": {
+    "message": "正在下载列表…"
+  },
+  "listsSummary": {
+    "message": "已收录 {0} 个域名 · 更新于{1}"
+  },
+  "listsSomeFailed": {
+    "message": "部分列表更新失败"
+  },
+  "listsSkipped": {
+    "message": "{0} 个超出 Safari 的规则上限"
+  },
+  "protectionOn": {
+    "message": "保护已开启"
+  },
+  "sitePaused": {
+    "message": "已在此网站暂停拦截广告"
+  },
+  "thisPage": {
+    "message": "此页面"
+  },
+  "browserPage": {
+    "message": "Shield 不在浏览器页面上运行"
+  },
+  "applying": {
+    "message": "正在应用… Safari 最多可能需要一分钟"
+  },
+  "blockedTitle": {
+    "message": "已拦截危险网站"
+  },
+  "blockedBody": {
+    "message": "Shield 已阻止此页面加载，因为它的地址在一份名单上，名单中的网站会传播恶意软件、窃取密码，或劫持你的电脑来挖掘加密货币。"
+  },
+  "blockedAdvice": {
+    "message": "如果你是通过电子邮件或消息中的链接来到这里的，最安全的做法是返回。"
+  },
+  "goBack": {
+    "message": "返回"
+  },
+  "openAnyway": {
+    "message": "仍然打开此网站"
+  },
+  "unknownAddress": {
+    "message": "未知地址"
+  },
+  "opening": {
+    "message": "正在打开… Safari 最多可能需要一分钟来更新规则。"
+  },
+  "openFailed": {
+    "message": "无法打开此网站，请重试。"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "Shield – 広告と脅威のブロッカー"
+  },
+  "extDescription": {
+    "message": "広告、トラッカー、暗号通貨マイナー、既知のマルウェアサイトやフィッシングサイトをブロックします。"
+  },
+  "totalsHint": {
+    "message": "インストールしてからの合計です。節約したデータ量は、ブロックしたファイルの種類ごとの一般的なサイズからの推定値です。Safariは読み込まれなかったリクエストのサイズを報告しません。"
+  },
+  "stopped": {
+    "message": "件ブロック"
+  },
+  "saved": {
+    "message": "節約"
+  },
+  "siteToggleHint": {
+    "message": "このサイトで広告をブロック"
+  },
+  "blockedOnPage": {
+    "message": "このページでブロックしたリクエスト"
+  },
+  "settingAds": {
+    "message": "広告とトラッカーをブロック"
+  },
+  "settingThreats": {
+    "message": "マルウェア、フィッシング、マイナーをブロック"
+  },
+  "settingCosmetic": {
+    "message": "ページ上の広告要素を非表示"
+  },
+  "updateLists": {
+    "message": "リストを更新"
+  },
+  "updating": {
+    "message": "更新中…"
+  },
+  "justNow": {
+    "message": "たった今"
+  },
+  "minutesAgo": {
+    "message": "{0}分前"
+  },
+  "hoursAgo": {
+    "message": "{0}時間前"
+  },
+  "daysAgo": {
+    "message": "{0}日前"
+  },
+  "listsFailed": {
+    "message": "リストをダウンロードできませんでした。内蔵ルールは有効です。"
+  },
+  "listsDownloading": {
+    "message": "リストをダウンロード中…"
+  },
+  "listsSummary": {
+    "message": "{0}件のドメイン · {1}に更新"
+  },
+  "listsSomeFailed": {
+    "message": "一部のリストを更新できませんでした"
+  },
+  "listsSkipped": {
+    "message": "{0}件がSafariのルール上限を超過"
+  },
+  "protectionOn": {
+    "message": "保護はオンです"
+  },
+  "sitePaused": {
+    "message": "このサイトでは広告ブロックを一時停止中"
+  },
+  "thisPage": {
+    "message": "このページ"
+  },
+  "browserPage": {
+    "message": "Shieldはブラウザのページでは動作しません"
+  },
+  "applying": {
+    "message": "適用中… Safariでは最大1分かかることがあります"
+  },
+  "blockedTitle": {
+    "message": "危険なサイトをブロックしました"
+  },
+  "blockedBody": {
+    "message": "このページのアドレスは、マルウェアを拡散したり、パスワードを盗んだり、コンピュータを乗っ取って暗号通貨を採掘したりするサイトのリストに載っているため、Shieldが読み込みを止めました。"
+  },
+  "blockedAdvice": {
+    "message": "メールやメッセージのリンクからここに来た場合は、戻るのが最も安全です。"
+  },
+  "goBack": {
+    "message": "戻る"
+  },
+  "openAnyway": {
+    "message": "それでもサイトを開く"
+  },
+  "unknownAddress": {
+    "message": "不明なアドレス"
+  },
+  "opening": {
+    "message": "開いています… Safariがルールを更新するのに最大1分かかることがあります。"
+  },
+  "openFailed": {
+    "message": "サイトを開けませんでした。もう一度お試しください。"
+  }
+}

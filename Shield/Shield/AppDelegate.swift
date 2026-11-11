@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func addCheckForUpdatesMenuItem() {
         guard let updaterController, let appMenu = NSApp.mainMenu?.items.first?.submenu else { return }
         let item = NSMenuItem(
-            title: "Check for Updates…",
+            title: String(localized: "Check for Updates…"),
             action: #selector(SPUStandardUpdaterController.checkForUpdates(_:)),
             keyEquivalent: "")
         item.target = updaterController

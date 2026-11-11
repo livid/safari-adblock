@@ -2,62 +2,38 @@
 //  ViewController.swift
 //  Shield
 //
-//  Created by Xcode Bot on 11/10/26.
-//
 
 import Cocoa
 import SafariServices
-import WebKit
+import SwiftUI
 
 let extensionBundleIdentifier = "io.github.livid.Shield.Extension"
 
-class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
+/// Hosts the window's content, which is the SwiftUI `StatusView`.
+class ViewController: NSViewController {
 
-    @IBOutlet var webView: WKWebView!
+    private let status = ShieldStatus()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.webView.navigationDelegate = self
-
-        self.webView.configuration.userContentController.add(self, name: "controller")
-
-        self.webView.loadFileURL(Bundle.main.url(forResource: "Main", withExtension: "html")!, allowingReadAccessTo: Bundle.main.resourceURL!)
+        let content = NSHostingView(rootView: StatusView(status: status, openSafariSettings: {
+            Task { try? await SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) }
+        }))
+        content.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(content)
+        // The window isn't resizable: it takes the size of its content.
+        NSLayoutConstraint.activate([
+            content.topAnchor.constraint(equalTo: view.topAnchor),
+            content.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            content.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            content.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
-            guard let state = state, error == nil else {
-                // Insert code to inform the user that something went wrong.
-                return
-            }
-
-            DispatchQueue.main.async {
-                if #available(macOS 13, *) {
-                    webView.evaluateJavaScript("show(\(state.isEnabled), true)")
-                } else {
-                    webView.evaluateJavaScript("show(\(state.isEnabled), false)")
-                }
-            }
-        }
-    }
-
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if (message.body as! String != "open-preferences") {
-            return;
-        }
-
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
-            DispatchQueue.main.async {
-                // Stay open if Sparkle is in the middle of an update; it quits the app itself
-                // when the update is installed.
-                if (NSApp.delegate as? AppDelegate)?.updateInProgress == true {
-                    self.view.window?.close()
-                } else {
-                    NSApplication.shared.terminate(nil)
-                }
-            }
-        }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.window?.center()
     }
 
 }
