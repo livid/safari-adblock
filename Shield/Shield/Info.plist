@@ -4,5 +4,13 @@
 <dict>
 	<key>SFSafariWebExtensionConverterVersion</key>
 	<string>27.0</string>
+	<key>SUFeedURL</key>
+	<string>https://github.com/livid/safari-adblock/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>7m7OrQT89v/km38npr4SYoQ35JQ0YIeDM/ZvR8w8F9g=</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUEnableInstallerLauncherService</key>
+	<true/>
 </dict>
 </plist>

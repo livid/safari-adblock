@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1A5C0DE0000000000000003 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = E1A5C0DE0000000000000002 /* Sparkle */; };
 		D771865430A4326D0098AFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771865330A4326D0098AFFF /* AppDelegate.swift */; };
 		D771865830A4326D0098AFFF /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = D771865630A4326D0098AFFF /* Main.html */; };
 		D771865A30A4326D0098AFFF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D771865930A4326D0098AFFF /* Icon.png */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E1A5C0DE0000000000000004 /* Shield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shield.entitlements; sourceTree = "<group>"; };
 		D771865030A4326D0098AFFF /* Shield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D771865330A4326D0098AFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D771865730A4326D0098AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		D771864D30A4326D0098AFFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				E1A5C0DE0000000000000003 /* Sparkle in Frameworks */,
 			);
 		};
 		D771866830A4326E0098AFFF /* Frameworks */ = {
@@ -117,6 +120,7 @@
 				D771866130A4326D0098AFFF /* Main.storyboard */,
 				D771866430A4326E0098AFFF /* Assets.xcassets */,
 				D771866630A4326E0098AFFF /* Info.plist */,
+				E1A5C0DE0000000000000004 /* Shield.entitlements */,
 				D771865530A4326D0098AFFF /* Resources */,
 			);
 			path = Shield;
@@ -179,6 +183,9 @@
 				D771866E30A4326E0098AFFF /* PBXTargetDependency */,
 			);
 			name = Shield;
+			packageProductDependencies = (
+				E1A5C0DE0000000000000002 /* Sparkle */,
+			);
 			productName = Shield;
 			productReference = D771865030A4326D0098AFFF /* Shield.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +232,9 @@
 			);
 			mainGroup = D771864730A4326D0098AFFF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E1A5C0DE0000000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D771865130A4326D0098AFFF /* Products */;
 			projectDirPath = "";
@@ -511,8 +521,10 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				CODE_SIGN_ENTITLEMENTS = Shield/Shield.entitlements;
 				INFOPLIST_FILE = Shield/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -554,8 +566,10 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				CODE_SIGN_ENTITLEMENTS = Shield/Shield.entitlements;
 				INFOPLIST_FILE = Shield/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -611,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1A5C0DE0000000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = exactVersion;
+				version = 2.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1A5C0DE0000000000000002 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1A5C0DE0000000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D771864830A4326D0098AFFF /* Project object */;
 	validationLevel = 1;

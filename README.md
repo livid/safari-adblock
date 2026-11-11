@@ -4,6 +4,13 @@ Safari port of [Shield](../chrome-adblock), the ad, tracker, cryptominer, malwar
 
 Requires Safari 18 or later on macOS 14 or later.
 
+## Install
+
+1. Download `Shield-<version>.zip` from [Releases](https://github.com/livid/safari-adblock/releases/latest), unzip it, and move **Shield** to Applications. The app is notarized by Apple.
+2. Open Shield and click "Quit and Open Safari Settings…". Turn on **Shield** and set "Allow on every website".
+
+Shield checks for updates when you open the app, and daily while it stays open. You can also choose Shield → Check for Updates…. Updates come from this repository's releases, signed with Shield's own update key.
+
 ## Layout
 
 | Path | What it is |
@@ -13,6 +20,8 @@ Requires Safari 18 or later on macOS 14 or later.
 | `tools/build-rules.mjs` | Regenerates `extension/rules/` and `extension/cosmetic/` from Brave's default filter lists (`node tools/build-rules.mjs`). |
 | `tools/count-webkit-rules.swift` | Measures what each bundled ruleset costs under Safari's rule limit and writes `extension/rules/webkit-rule-counts.json`. Run it (`swift tools/count-webkit-rules.swift`) after every rule rebuild. |
 | `tools/custom-filters.txt` | Shield's own filters, compiled in alongside the lists. |
+| `tools/release.sh` | Builds, notarizes and publishes a release with its Sparkle appcast (see [Releasing](#releasing)). |
+| `tools/verify-update-signature.swift` | Checks an update's EdDSA signature against the public key in the app; used by `release.sh`. |
 
 ## Build and run locally
 
@@ -29,6 +38,26 @@ Over SSH the login keychain is locked and codesign fails with `errSecInternalCom
 Then in Safari: Settings → Extensions → enable **Shield**, and set "Allow on every website". Safari asks per site otherwise, and element hiding needs the access.
 
 Without a signing identity, build ad-hoc instead (`CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM=`). Safari then loads it only with Settings → Developer → "Allow unsigned extensions" on, and turns that off every time it quits.
+
+## Releasing
+
+Releases are Developer ID builds, notarized by Apple, published as GitHub releases. Installed copies find them through [Sparkle](https://sparkle-project.org) (2.10.1, a Swift package in the Xcode project). The app reads `https://github.com/livid/safari-adblock/releases/latest/download/appcast.xml`, which always points at the newest release's `appcast.xml`.
+
+```sh
+# bump "version" in extension/manifest.json, then commit and push
+tools/release.sh --notes notes.md     # Markdown notes, for GitHub and the update dialog
+tools/release.sh --dry-run            # everything except publishing; output in dist/
+```
+
+The script refuses to publish uncommitted or unpushed code, or a version that already has a release. It checks the Developer ID signatures and that notarization and Gatekeeper accept the app. Before uploading, it confirms that the update's signature verifies against the public key inside the app. The build number Sparkle compares is the commit count.
+
+One-time setup on the Mac that releases:
+
+- **Notarization login:** a notarytool keychain profile for team 66KP7KX9MX, named `exe-notary` (the one this Mac already has), or set `NOTARY_PROFILE`. To create one: `xcrun notarytool store-credentials exe-notary --apple-id <Apple ID> --team-id 66KP7KX9MX`, which asks for an [app-specific password](https://account.apple.com/account/manage).
+- **Update signing key:** stored in the login keychain under the account `io.github.livid.Shield`. Its public half is `SUPublicEDKey` in `Shield/Shield/Info.plist`. **Back it up**: without it, installed copies can never be updated again. Export it with `tools/.sparkle/2.10.1/bin/generate_keys --account io.github.livid.Shield -x <file>`, keep the file somewhere safe, and import it on another Mac with `-f <file>`.
+- **gh**, logged in, to create the release.
+
+Over SSH, unlock the login keychain first (`security unlock-keychain ~/Library/Keychains/login.keychain-db`). Signing and notarization both need it.
 
 ## How Safari differs, and what Shield does about it
 

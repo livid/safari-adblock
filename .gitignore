@@ -3,3 +3,5 @@ tools/.cache/
 xcuserdata/
 *.xcuserstate
 .DS_Store
+dist/
+tools/.sparkle/

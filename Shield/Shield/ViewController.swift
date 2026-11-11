@@ -49,7 +49,13 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
         SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
             DispatchQueue.main.async {
-                NSApplication.shared.terminate(nil)
+                // Stay open if Sparkle is in the middle of an update; it quits the app itself
+                // when the update is installed.
+                if (NSApp.delegate as? AppDelegate)?.updateInProgress == true {
+                    self.view.window?.close()
+                } else {
+                    NSApplication.shared.terminate(nil)
+                }
             }
         }
     }
