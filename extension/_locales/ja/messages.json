@@ -53,8 +53,11 @@
   "listsDownloading": {
     "message": "リストをダウンロード中…"
   },
-  "listsSummary": {
-    "message": "{0}件のドメイン · {1}に更新"
+  "listsCount": {
+    "message": "{0}件のドメイン"
+  },
+  "listsUpdated": {
+    "message": "{0}に更新"
   },
   "listsSomeFailed": {
     "message": "一部のリストを更新できませんでした"

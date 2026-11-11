@@ -28,7 +28,8 @@ function renderLists(feeds, skipped) {
   if (!newest) {
     el.textContent = failed ? t("listsFailed") : t("listsDownloading");
   } else {
-    el.textContent = t("listsSummary", total.toLocaleString(), ago(newest));
+    // Two rows: how many domains, then when they were updated (and anything that went wrong).
+    el.textContent = t("listsCount", total.toLocaleString()) + "\n" + t("listsUpdated", ago(newest));
     if (failed) el.textContent += " · " + t("listsSomeFailed");
     // Safari caps an extension's rules; the bundled lists come first.
     if (skipped > 0) el.textContent += " · " + t("listsSkipped", skipped.toLocaleString());

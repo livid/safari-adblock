@@ -1,6 +1,6 @@
 #!/bin/bash
-# Builds a notarized Shield.app and publishes it as a GitHub release, together with the
-# Sparkle appcast that installed copies check for updates.
+# Builds a notarized Shield.app and publishes it as a GitHub release: a disk image for people
+# to download, and a zip with the Sparkle appcast that installed copies update from.
 #
 #   tools/release.sh --notes notes.md     build, notarize, sign, publish
 #   tools/release.sh --dry-run            the same, without publishing (output in dist/)
@@ -63,6 +63,8 @@ version=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1]))["ve
 build=$(git rev-list --count HEAD)
 tag=v$version
 zip_name=Shield-$version.zip
+dmg_name=Shield-$version.dmg
+DMGBUILD_ENV=$ROOT/tools/.cache/dmgbuild
 
 # ---------------------------------------------------------------- checks
 
@@ -86,6 +88,26 @@ if [ ! -x "$SPARKLE_BIN/sign_update" ]; then
   [ "$(shasum -a 256 "$tarball" | cut -d' ' -f1)" = "$SPARKLE_DIGEST" ] || fail "Sparkle download doesn't match its published digest"
   tar -xf "$tarball" -C "$ROOT/tools/.sparkle/$SPARKLE_VERSION"
 fi
+
+if [ ! -x "$DMGBUILD_ENV/bin/dmgbuild" ]; then
+  step "Installing dmgbuild"
+  rm -rf "$DMGBUILD_ENV"
+  python3 -m venv "$DMGBUILD_ENV"
+  "$DMGBUILD_ENV/bin/pip" install -q --disable-pip-version-check --require-hashes --no-deps -r tools/dmg-requirements.txt
+fi
+
+# Sends a zip or disk image to Apple's notary service and waits for the verdict.
+notarize_file() {
+  xcrun notarytool submit "$1" --keychain-profile "$NOTARY_PROFILE" --wait \
+    --output-format json >"$DIST/notary.json" || true
+  status=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1])).get("status",""))' "$DIST/notary.json" 2>/dev/null || true)
+  if [ "$status" != "Accepted" ]; then
+    cat "$DIST/notary.json" >&2 || true
+    id=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1])).get("id",""))' "$DIST/notary.json" 2>/dev/null || true)
+    [ -n "$id" ] && xcrun notarytool log "$id" --keychain-profile "$NOTARY_PROFILE" >&2 || true
+    fail "notarization status: ${status:-none}"
+  fi
+}
 
 # ---------------------------------------------------------------- build
 
@@ -120,15 +142,7 @@ echo "Developer ID, team $TEAM, version $version ($build)"
 if [ $notarize = 1 ]; then
   step "Notarizing (this usually takes a few minutes)"
   ditto -c -k --keepParent "$app" "$DIST/notarize.zip"
-  xcrun notarytool submit "$DIST/notarize.zip" --keychain-profile "$NOTARY_PROFILE" --wait \
-    --output-format json >"$DIST/notary.json" || true
-  status=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1])).get("status",""))' "$DIST/notary.json" 2>/dev/null || true)
-  if [ "$status" != "Accepted" ]; then
-    cat "$DIST/notary.json" >&2 || true
-    id=$(python3 -I -c 'import json,sys; print(json.load(open(sys.argv[1])).get("id",""))' "$DIST/notary.json" 2>/dev/null || true)
-    [ -n "$id" ] && xcrun notarytool log "$id" --keychain-profile "$NOTARY_PROFILE" >&2 || true
-    fail "notarization status: ${status:-none}"
-  fi
+  notarize_file "$DIST/notarize.zip"
   rm "$DIST/notarize.zip"
 
   step "Stapling"
@@ -202,6 +216,30 @@ PY
 xmllint --noout "$DIST/appcast.xml"
 echo "$DIST/appcast.xml"
 
+# ---------------------------------------------------------------- disk image
+
+# What people download: Shield next to an Applications shortcut, on a background that shows
+# the version and says to drag one onto the other.
+step "Building $dmg_name"
+swift tools/dmg-background.swift "$version" "$DIST/dmg-background.png" 1
+swift tools/dmg-background.swift "$version" "$DIST/dmg-background@2x.png" 2
+tiffutil -cathidpicheck "$DIST/dmg-background.png" "$DIST/dmg-background@2x.png" -out "$DIST/dmg-background.tiff" 2>/dev/null
+"$DMGBUILD_ENV/bin/dmgbuild" -s tools/dmg-settings.py -D app="$app" -D background="$DIST/dmg-background.tiff" \
+  "Shield $version" "$DIST/$dmg_name" 2> >(grep -v "is deprecated" >&2) >/dev/null
+rm "$DIST"/dmg-background*
+codesign --sign "Developer ID Application" --timestamp "$DIST/$dmg_name"
+codesign -dvv "$DIST/$dmg_name" 2>&1 | grep -q "TeamIdentifier=$TEAM" || fail "the disk image isn't signed by team $TEAM"
+
+if [ $notarize = 1 ]; then
+  step "Notarizing the disk image"
+  notarize_file "$DIST/$dmg_name"
+  xcrun stapler staple -q "$DIST/$dmg_name"
+  xcrun stapler validate -q "$DIST/$dmg_name"
+  spctl --assess --type open --context context:primary-signature -vv "$DIST/$dmg_name" 2>&1 \
+    | grep -q "source=Notarized Developer ID" || fail "Gatekeeper doesn't accept the disk image"
+  echo "accepted by Gatekeeper as Notarized Developer ID"
+fi
+
 # ---------------------------------------------------------------- publish
 
 if [ $publish = 0 ]; then
@@ -210,7 +248,7 @@ if [ $publish = 0 ]; then
 fi
 
 step "Publishing $tag on GitHub"
-gh release create "$tag" "$DIST/$zip_name" "$DIST/appcast.xml" --repo "$REPO" \
+gh release create "$tag" "$DIST/$dmg_name" "$DIST/$zip_name" "$DIST/appcast.xml" --repo "$REPO" \
   --target "$(git rev-parse HEAD)" --title "Shield $version" --notes-file "$notes"
 
 step "Checking what installed copies will see"

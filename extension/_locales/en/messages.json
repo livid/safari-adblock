@@ -53,8 +53,11 @@
   "listsDownloading": {
     "message": "Downloading lists…"
   },
-  "listsSummary": {
-    "message": "{0} domains listed · updated {1}"
+  "listsCount": {
+    "message": "{0} domains listed"
+  },
+  "listsUpdated": {
+    "message": "Updated {0}"
   },
   "listsSomeFailed": {
     "message": "some lists failed to update"

@@ -89,6 +89,50 @@
         }
       }
     },
+    "In Settings → Apps → Safari → Extensions → Shield – Ad & Threat Blocker, set “All Websites” to Allow. Until then Safari asks site by site, and Shield can’t hide ads on sites it hasn’t been allowed on.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「設定」→「アプリ」→「Safari」→「機能拡張」→「Shield – 広告と脅威のブロッカー」で、「すべてのWebサイト」を「許可」にします。それまではSafariがサイトごとに確認し、許可されていないサイトではShieldが広告を非表示にできません。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“设置”→“App”→“Safari浏览器”→“扩展”→“Shield – 广告与威胁拦截”中，将“所有网站”设为“允许”。在此之前，Safari 会逐个网站询问，Shield 也无法在未获允许的网站上隐藏广告。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「設定」→「App」→「Safari」→「延伸功能」→「Shield – 廣告與威脅阻擋」中，將「所有網站」設為「允許」。在此之前，Safari 會逐一詢問每個網站，Shield 也無法在未獲允許的網站上隱藏廣告。"
+          }
+        }
+      }
+    },
+    "In Settings → Apps → Safari → Extensions → Shield – Ad & Threat Blocker, turn on “Allow Extension”. Then set “All Websites” to Allow.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「設定」→「アプリ」→「Safari」→「機能拡張」→「Shield – 広告と脅威のブロッカー」で、「機能拡張を許可」をオンにします。次に「すべてのWebサイト」を「許可」にします。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“设置”→“App”→“Safari浏览器”→“扩展”→“Shield – 广告与威胁拦截”中，打开“允许扩展”。然后将“所有网站”设为“允许”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「設定」→「App」→「Safari」→「延伸功能」→「Shield – 廣告與威脅阻擋」中，開啟「允許延伸功能」。然後將「所有網站」設為「允許」。"
+          }
+        }
+      }
+    },
     "Open Safari Settings…": {
       "localizations": {
         "ja": {
@@ -107,6 +151,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "打開 Safari 設定⋯"
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を開く"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開設定"
           }
         }
       }

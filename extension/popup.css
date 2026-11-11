@@ -133,7 +133,15 @@ footer {
   padding: 10px 16px 12px;
   border-top: 1px solid var(--line);
 }
-.lists { color: var(--muted); font-size: 11.5px; min-width: 0; }
+.lists { color: var(--muted); font-size: 11.5px; min-width: 0; white-space: pre-line; }
+
+/* On a Mac the popup is as wide as its content, 320px. An iPhone shows it in a sheet that is
+   wider than that and has large rounded corners: fill the sheet, and keep the last row clear
+   of the corners. Touch devices only, so the Mac popup can never be stretched. */
+@media (min-width: 321px) and (pointer: coarse) {
+  body { width: 100%; }
+  footer { padding-bottom: 28px; }
+}
 .lists .error { color: var(--warn); }
 button {
   flex: none;

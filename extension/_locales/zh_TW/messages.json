@@ -53,8 +53,11 @@
   "listsDownloading": {
     "message": "正在下載列表⋯"
   },
-  "listsSummary": {
-    "message": "已收錄 {0} 個網域 · 更新於{1}"
+  "listsCount": {
+    "message": "已收錄 {0} 個網域"
+  },
+  "listsUpdated": {
+    "message": "更新於{0}"
   },
   "listsSomeFailed": {
     "message": "部分列表更新失敗"

@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1A5C0DE0000000000000201 /* ShieldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000200 /* ShieldApp.swift */; };
+		E1A5C0DE0000000000000203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000202 /* Assets.xcassets */; };
+		E1A5C0DE0000000000000204 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000012 /* Localizable.xcstrings */; };
+		E1A5C0DE0000000000000205 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771867030A4326E0098AFFF /* SafariWebExtensionHandler.swift */; };
+		E1A5C0DE0000000000000206 /* Shield Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000211 /* Shield Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1A5C0DE0000000000000300 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = D771867D30A4326E0098AFFF /* popup.js */; };
+		E1A5C0DE0000000000000301 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = D771867E30A4326E0098AFFF /* background.js */; };
+		E1A5C0DE0000000000000302 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = D771867F30A4326E0098AFFF /* popup.html */; };
+		E1A5C0DE0000000000000303 /* blocked.js in Resources */ = {isa = PBXBuildFile; fileRef = D771868030A4326E0098AFFF /* blocked.js */; };
+		E1A5C0DE0000000000000304 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = D771868130A4326E0098AFFF /* icons */; };
+		E1A5C0DE0000000000000305 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D771868230A4326E0098AFFF /* manifest.json */; };
+		E1A5C0DE0000000000000306 /* rules in Resources */ = {isa = PBXBuildFile; fileRef = D771868330A4326E0098AFFF /* rules */; };
+		E1A5C0DE0000000000000307 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = D771868430A4326E0098AFFF /* popup.css */; };
+		E1A5C0DE0000000000000308 /* blocked.html in Resources */ = {isa = PBXBuildFile; fileRef = D771868530A4326E0098AFFF /* blocked.html */; };
+		E1A5C0DE0000000000000309 /* cosmetic in Resources */ = {isa = PBXBuildFile; fileRef = D771868630A4326E0098AFFF /* cosmetic */; };
+		E1A5C0DE0000000000000310 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000017 /* _locales */; };
+		E1A5C0DE0000000000000311 /* i18n.js in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000019 /* i18n.js */; };
 		E1A5C0DE0000000000000011 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000010 /* StatusView.swift */; };
 		E1A5C0DE0000000000000013 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000012 /* Localizable.xcstrings */; };
 		E1A5C0DE0000000000000018 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = E1A5C0DE0000000000000017 /* _locales */; };
@@ -31,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E1A5C0DE0000000000000220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D771864830A4326D0098AFFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1A5C0DE0000000000000231;
+			remoteInfo = "Shield iOS Extension";
+		};
 		D771866D30A4326E0098AFFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D771864830A4326D0098AFFF /* Project object */;
@@ -41,6 +65,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E1A5C0DE0000000000000222 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				E1A5C0DE0000000000000206 /* Shield Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
 		D771867830A4326E0098AFFF /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			dstPath = "";
@@ -53,6 +86,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E1A5C0DE0000000000000200 /* ShieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldApp.swift; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000207 /* Shield iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shield iOS.entitlements"; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000208 /* Shield iOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shield iOS Extension.entitlements"; sourceTree = "<group>"; };
+		E1A5C0DE0000000000000210 /* Shield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Shield.app (iOS)"; path = Shield.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A5C0DE0000000000000211 /* Shield Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = "Shield Extension.appex (iOS)"; path = "Shield Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A5C0DE0000000000000010 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		E1A5C0DE0000000000000012 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E1A5C0DE0000000000000014 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -84,6 +123,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E1A5C0DE0000000000000223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E1A5C0DE0000000000000224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
 		D771864D30A4326D0098AFFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
@@ -98,11 +147,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1A5C0DE0000000000000225 /* Shield iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E1A5C0DE0000000000000200 /* ShieldApp.swift */,
+				E1A5C0DE0000000000000202 /* Assets.xcassets */,
+				E1A5C0DE0000000000000207 /* Shield iOS.entitlements */,
+				E1A5C0DE0000000000000208 /* Shield iOS Extension.entitlements */,
+			);
+			path = "Shield iOS";
+			sourceTree = "<group>";
+		};
 		D771864730A4326D0098AFFF = {
 			isa = PBXGroup;
 			children = (
 				D771865230A4326D0098AFFF /* Shield */,
 				D771866F30A4326E0098AFFF /* Shield Extension */,
+				E1A5C0DE0000000000000225 /* Shield iOS */,
 				D771865130A4326D0098AFFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +173,8 @@
 			children = (
 				D771865030A4326D0098AFFF /* Shield.app */,
 				D771866B30A4326E0098AFFF /* Shield Extension.appex */,
+				E1A5C0DE0000000000000210 /* Shield.app */,
+				E1A5C0DE0000000000000211 /* Shield Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +228,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E1A5C0DE0000000000000230 /* Shield iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1A5C0DE0000000000000240 /* Build configuration list for PBXNativeTarget "Shield iOS" */;
+			buildPhases = (
+				E1A5C0DE0000000000000226 /* Sources */,
+				E1A5C0DE0000000000000223 /* Frameworks */,
+				E1A5C0DE0000000000000228 /* Resources */,
+				E1A5C0DE0000000000000222 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1A5C0DE0000000000000221 /* PBXTargetDependency */,
+			);
+			name = "Shield iOS";
+			productName = "Shield iOS";
+			productReference = E1A5C0DE0000000000000210 /* Shield.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1A5C0DE0000000000000231 /* Shield iOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1A5C0DE0000000000000241 /* Build configuration list for PBXNativeTarget "Shield iOS Extension" */;
+			buildPhases = (
+				E1A5C0DE0000000000000227 /* Sources */,
+				E1A5C0DE0000000000000224 /* Frameworks */,
+				E1A5C0DE0000000000000229 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "Shield iOS Extension";
+			productName = "Shield iOS Extension";
+			productReference = E1A5C0DE0000000000000211 /* Shield Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D771864F30A4326D0098AFFF /* Shield */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D771867930A4326E0098AFFF /* Build configuration list for PBXNativeTarget "Shield" */;
@@ -242,11 +339,37 @@
 			targets = (
 				D771864F30A4326D0098AFFF /* Shield */,
 				D771866A30A4326E0098AFFF /* Shield Extension */,
+				E1A5C0DE0000000000000230 /* Shield iOS */,
+				E1A5C0DE0000000000000231 /* Shield iOS Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E1A5C0DE0000000000000228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				E1A5C0DE0000000000000203 /* Assets.xcassets in Resources */,
+				E1A5C0DE0000000000000204 /* Localizable.xcstrings in Resources */,
+			);
+		};
+		E1A5C0DE0000000000000229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				E1A5C0DE0000000000000300 /* popup.js in Resources */,
+				E1A5C0DE0000000000000301 /* background.js in Resources */,
+				E1A5C0DE0000000000000302 /* popup.html in Resources */,
+				E1A5C0DE0000000000000303 /* blocked.js in Resources */,
+				E1A5C0DE0000000000000304 /* icons in Resources */,
+				E1A5C0DE0000000000000305 /* manifest.json in Resources */,
+				E1A5C0DE0000000000000306 /* rules in Resources */,
+				E1A5C0DE0000000000000307 /* popup.css in Resources */,
+				E1A5C0DE0000000000000308 /* blocked.html in Resources */,
+				E1A5C0DE0000000000000309 /* cosmetic in Resources */,
+				E1A5C0DE0000000000000310 /* _locales in Resources */,
+				E1A5C0DE0000000000000311 /* i18n.js in Resources */,
+			);
+		};
 		D771864E30A4326D0098AFFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
@@ -275,6 +398,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E1A5C0DE0000000000000226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				E1A5C0DE0000000000000201 /* ShieldApp.swift in Sources */,
+			);
+		};
+		E1A5C0DE0000000000000227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				E1A5C0DE0000000000000205 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
 		D771864C30A4326D0098AFFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
@@ -292,6 +427,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E1A5C0DE0000000000000221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1A5C0DE0000000000000231 /* Shield iOS Extension */;
+			targetProxy = E1A5C0DE0000000000000220 /* PBXContainerItemProxy */;
+		};
 		D771866E30A4326E0098AFFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D771866A30A4326E0098AFFF /* Shield Extension */;
@@ -314,6 +454,124 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E1A5C0DE0000000000000242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.3.3;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shield iOS/Shield iOS.entitlements";
+				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
+				PRODUCT_NAME = Shield;
+			};
+			name = Debug;
+		};
+		E1A5C0DE0000000000000243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.3.3;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shield iOS/Shield iOS.entitlements";
+				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
+				PRODUCT_NAME = Shield;
+			};
+			name = Release;
+		};
+		E1A5C0DE0000000000000244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.3.3;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = "Shield iOS/Shield iOS Extension.entitlements";
+				INFOPLIST_FILE = "Shield Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield.Extension;
+				PRODUCT_NAME = "Shield Extension";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E1A5C0DE0000000000000245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.3.3;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = "Shield iOS/Shield iOS Extension.entitlements";
+				INFOPLIST_FILE = "Shield Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield.Extension;
+				PRODUCT_NAME = "Shield Extension";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		D771867330A4326E0098AFFF /* Debug configuration for PBXProject "Shield" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -452,7 +710,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -488,7 +746,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -530,7 +788,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -573,7 +831,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -593,6 +851,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E1A5C0DE0000000000000240 /* Build configuration list for PBXNativeTarget "Shield iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1A5C0DE0000000000000242 /* Debug */,
+				E1A5C0DE0000000000000243 /* Release */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E1A5C0DE0000000000000241 /* Build configuration list for PBXNativeTarget "Shield iOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1A5C0DE0000000000000244 /* Debug */,
+				E1A5C0DE0000000000000245 /* Release */,
+			);
+			defaultConfigurationName = Release;
+		};
 		D771864B30A4326D0098AFFF /* Build configuration list for PBXProject "Shield" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

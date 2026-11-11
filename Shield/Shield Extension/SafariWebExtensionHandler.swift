@@ -8,9 +8,13 @@
 
 import SafariServices
 
-/// The app group shared with the Shield app. Same name as in StatusView.swift and in both
-/// targets' entitlements.
+/// The app group shared with the Shield app. Same names as in StatusView.swift (Mac) and
+/// ShieldApp.swift (iOS), and in the targets' entitlements.
+#if os(iOS)
+let sharedSuiteName = "group.io.github.livid.Shield"
+#else
 let sharedSuiteName = "66KP7KX9MX.io.github.livid.Shield"
+#endif
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 

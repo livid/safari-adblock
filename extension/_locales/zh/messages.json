@@ -53,8 +53,11 @@
   "listsDownloading": {
     "message": "正在下载列表…"
   },
-  "listsSummary": {
-    "message": "已收录 {0} 个域名 · 更新于{1}"
+  "listsCount": {
+    "message": "已收录 {0} 个域名"
+  },
+  "listsUpdated": {
+    "message": "更新于{0}"
   },
   "listsSomeFailed": {
     "message": "部分列表更新失败"
