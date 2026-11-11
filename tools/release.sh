@@ -228,15 +228,17 @@ tiffutil -cathidpicheck "$DIST/dmg-background.png" "$DIST/dmg-background@2x.png"
   "Shield $version" "$DIST/$dmg_name" 2> >(grep -v "is deprecated" >&2) >/dev/null
 rm "$DIST"/dmg-background*
 codesign --sign "Developer ID Application" --timestamp "$DIST/$dmg_name"
-codesign -dvv "$DIST/$dmg_name" 2>&1 | grep -q "TeamIdentifier=$TEAM" || fail "the disk image isn't signed by team $TEAM"
+# Captured first: with pipefail, grep -q can end the pipe before codesign has finished writing.
+info=$(codesign -dvv "$DIST/$dmg_name" 2>&1)
+grep -q "TeamIdentifier=$TEAM" <<<"$info" || fail "the disk image isn't signed by team $TEAM"
 
 if [ $notarize = 1 ]; then
   step "Notarizing the disk image"
   notarize_file "$DIST/$dmg_name"
   xcrun stapler staple -q "$DIST/$dmg_name"
   xcrun stapler validate -q "$DIST/$dmg_name"
-  spctl --assess --type open --context context:primary-signature -vv "$DIST/$dmg_name" 2>&1 \
-    | grep -q "source=Notarized Developer ID" || fail "Gatekeeper doesn't accept the disk image"
+  info=$(spctl --assess --type open --context context:primary-signature -vv "$DIST/$dmg_name" 2>&1 || true)
+  grep -q "source=Notarized Developer ID" <<<"$info" || fail "Gatekeeper doesn't accept the disk image"
   echo "accepted by Gatekeeper as Notarized Developer ID"
 fi
 
