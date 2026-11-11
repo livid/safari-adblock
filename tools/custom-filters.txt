@@ -1,0 +1,13 @@
+! Shield's own filters, for junk the upstream lists miss. Same syntax as EasyList.
+! Compiled into the "ads" ruleset and the cosmetic files by tools/build-rules.mjs.
+
+! olevod.com: first-party gambling banners (page strips, floating corner box,
+! player overlay, player sidebar) and the ad network it loads.
+olevod.com##.pc-ads
+olevod.com##.ads-all
+olevod.com##.ads-mask
+olevod.com##.tab-live > .img_bg
+! Ad slides in the home carousel use hand-uploaded images; real titles use /upload/vod/.
+olevod.com##.pc-home-swiper .swiper-slide:has(> img[src*="/uploads/file/"])
+||54ads.com^
+||bionomysolera.com^$third-party

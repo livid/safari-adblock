@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D771865430A4326D0098AFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771865330A4326D0098AFFF /* AppDelegate.swift */; };
+		D771865830A4326D0098AFFF /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = D771865630A4326D0098AFFF /* Main.html */; };
+		D771865A30A4326D0098AFFF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D771865930A4326D0098AFFF /* Icon.png */; };
+		D771865C30A4326D0098AFFF /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = D771865B30A4326D0098AFFF /* Style.css */; };
+		D771865E30A4326D0098AFFF /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = D771865D30A4326D0098AFFF /* Script.js */; };
+		D771866030A4326D0098AFFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771865F30A4326D0098AFFF /* ViewController.swift */; };
+		D771866330A4326D0098AFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D771866130A4326D0098AFFF /* Main.storyboard */; };
+		D771866530A4326E0098AFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D771866430A4326E0098AFFF /* Assets.xcassets */; };
+		D771866C30A4326E0098AFFF /* Shield Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D771866B30A4326E0098AFFF /* Shield Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D771867130A4326E0098AFFF /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771867030A4326E0098AFFF /* SafariWebExtensionHandler.swift */; };
+		D771868730A4326E0098AFFF /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = D771867D30A4326E0098AFFF /* popup.js */; };
+		D771868830A4326E0098AFFF /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = D771867E30A4326E0098AFFF /* background.js */; };
+		D771868930A4326E0098AFFF /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = D771867F30A4326E0098AFFF /* popup.html */; };
+		D771868A30A4326E0098AFFF /* blocked.js in Resources */ = {isa = PBXBuildFile; fileRef = D771868030A4326E0098AFFF /* blocked.js */; };
+		D771868B30A4326E0098AFFF /* icons in Resources */ = {isa = PBXBuildFile; fileRef = D771868130A4326E0098AFFF /* icons */; };
+		D771868C30A4326E0098AFFF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D771868230A4326E0098AFFF /* manifest.json */; };
+		D771868D30A4326E0098AFFF /* rules in Resources */ = {isa = PBXBuildFile; fileRef = D771868330A4326E0098AFFF /* rules */; };
+		D771868E30A4326E0098AFFF /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = D771868430A4326E0098AFFF /* popup.css */; };
+		D771868F30A4326E0098AFFF /* blocked.html in Resources */ = {isa = PBXBuildFile; fileRef = D771868530A4326E0098AFFF /* blocked.html */; };
+		D771869030A4326E0098AFFF /* cosmetic in Resources */ = {isa = PBXBuildFile; fileRef = D771868630A4326E0098AFFF /* cosmetic */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D771866D30A4326E0098AFFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D771864830A4326D0098AFFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D771866A30A4326E0098AFFF;
+			remoteInfo = "Shield Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D771867830A4326E0098AFFF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				D771866C30A4326E0098AFFF /* Shield Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D771865030A4326D0098AFFF /* Shield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shield.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D771865330A4326D0098AFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D771865730A4326D0098AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		D771865930A4326D0098AFFF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D771865B30A4326D0098AFFF /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		D771865D30A4326D0098AFFF /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		D771865F30A4326D0098AFFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D771866230A4326D0098AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D771866430A4326E0098AFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D771866630A4326E0098AFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D771866B30A4326E0098AFFF /* Shield Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Shield Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D771867030A4326E0098AFFF /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		D771867230A4326E0098AFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D771867D30A4326E0098AFFF /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../extension/popup.js; sourceTree = "<group>"; };
+		D771867E30A4326E0098AFFF /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../extension/background.js; sourceTree = "<group>"; };
+		D771867F30A4326E0098AFFF /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../extension/popup.html; sourceTree = "<group>"; };
+		D771868030A4326E0098AFFF /* blocked.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = blocked.js; path = ../../extension/blocked.js; sourceTree = "<group>"; };
+		D771868130A4326E0098AFFF /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../extension/icons; sourceTree = "<group>"; };
+		D771868230A4326E0098AFFF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../extension/manifest.json; sourceTree = "<group>"; };
+		D771868330A4326E0098AFFF /* rules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rules; path = ../../extension/rules; sourceTree = "<group>"; };
+		D771868430A4326E0098AFFF /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = ../../extension/popup.css; sourceTree = "<group>"; };
+		D771868530A4326E0098AFFF /* blocked.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = blocked.html; path = ../../extension/blocked.html; sourceTree = "<group>"; };
+		D771868630A4326E0098AFFF /* cosmetic */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cosmetic; path = ../../extension/cosmetic; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D771864D30A4326D0098AFFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		D771866830A4326E0098AFFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D771864730A4326D0098AFFF = {
+			isa = PBXGroup;
+			children = (
+				D771865230A4326D0098AFFF /* Shield */,
+				D771866F30A4326E0098AFFF /* Shield Extension */,
+				D771865130A4326D0098AFFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D771865130A4326D0098AFFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D771865030A4326D0098AFFF /* Shield.app */,
+				D771866B30A4326E0098AFFF /* Shield Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D771865230A4326D0098AFFF /* Shield */ = {
+			isa = PBXGroup;
+			children = (
+				D771865330A4326D0098AFFF /* AppDelegate.swift */,
+				D771865F30A4326D0098AFFF /* ViewController.swift */,
+				D771866130A4326D0098AFFF /* Main.storyboard */,
+				D771866430A4326E0098AFFF /* Assets.xcassets */,
+				D771866630A4326E0098AFFF /* Info.plist */,
+				D771865530A4326D0098AFFF /* Resources */,
+			);
+			path = Shield;
+			sourceTree = "<group>";
+		};
+		D771865530A4326D0098AFFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D771865630A4326D0098AFFF /* Main.html */,
+				D771865930A4326D0098AFFF /* Icon.png */,
+				D771865B30A4326D0098AFFF /* Style.css */,
+				D771865D30A4326D0098AFFF /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D771866F30A4326E0098AFFF /* Shield Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D771867C30A4326E0098AFFF /* Resources */,
+				D771867030A4326E0098AFFF /* SafariWebExtensionHandler.swift */,
+				D771867230A4326E0098AFFF /* Info.plist */,
+			);
+			path = "Shield Extension";
+			sourceTree = "<group>";
+		};
+		D771867C30A4326E0098AFFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D771867D30A4326E0098AFFF /* popup.js */,
+				D771867E30A4326E0098AFFF /* background.js */,
+				D771867F30A4326E0098AFFF /* popup.html */,
+				D771868030A4326E0098AFFF /* blocked.js */,
+				D771868130A4326E0098AFFF /* icons */,
+				D771868230A4326E0098AFFF /* manifest.json */,
+				D771868330A4326E0098AFFF /* rules */,
+				D771868430A4326E0098AFFF /* popup.css */,
+				D771868530A4326E0098AFFF /* blocked.html */,
+				D771868630A4326E0098AFFF /* cosmetic */,
+			);
+			name = Resources;
+			path = "Shield Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D771864F30A4326D0098AFFF /* Shield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D771867930A4326E0098AFFF /* Build configuration list for PBXNativeTarget "Shield" */;
+			buildPhases = (
+				D771864C30A4326D0098AFFF /* Sources */,
+				D771864D30A4326D0098AFFF /* Frameworks */,
+				D771864E30A4326D0098AFFF /* Resources */,
+				D771867830A4326E0098AFFF /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D771866E30A4326E0098AFFF /* PBXTargetDependency */,
+			);
+			name = Shield;
+			productName = Shield;
+			productReference = D771865030A4326D0098AFFF /* Shield.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D771866A30A4326E0098AFFF /* Shield Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D771867530A4326E0098AFFF /* Build configuration list for PBXNativeTarget "Shield Extension" */;
+			buildPhases = (
+				D771866730A4326E0098AFFF /* Sources */,
+				D771866830A4326E0098AFFF /* Frameworks */,
+				D771866930A4326E0098AFFF /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "Shield Extension";
+			productName = "Shield Extension";
+			productReference = D771866B30A4326E0098AFFF /* Shield Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D771864830A4326D0098AFFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					D771864F30A4326D0098AFFF = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					D771866A30A4326E0098AFFF = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = D771864B30A4326D0098AFFF /* Build configuration list for PBXProject "Shield" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D771864730A4326D0098AFFF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D771865130A4326D0098AFFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D771864F30A4326D0098AFFF /* Shield */,
+				D771866A30A4326E0098AFFF /* Shield Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D771864E30A4326D0098AFFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				D771865A30A4326D0098AFFF /* Icon.png in Resources */,
+				D771866330A4326D0098AFFF /* Main.storyboard in Resources */,
+				D771865E30A4326D0098AFFF /* Script.js in Resources */,
+				D771865830A4326D0098AFFF /* Main.html in Resources */,
+				D771866530A4326E0098AFFF /* Assets.xcassets in Resources */,
+				D771865C30A4326D0098AFFF /* Style.css in Resources */,
+			);
+		};
+		D771866930A4326E0098AFFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				D771868D30A4326E0098AFFF /* rules in Resources */,
+				D771868830A4326E0098AFFF /* background.js in Resources */,
+				D771868A30A4326E0098AFFF /* blocked.js in Resources */,
+				D771868930A4326E0098AFFF /* popup.html in Resources */,
+				D771868F30A4326E0098AFFF /* blocked.html in Resources */,
+				D771869030A4326E0098AFFF /* cosmetic in Resources */,
+				D771868E30A4326E0098AFFF /* popup.css in Resources */,
+				D771868B30A4326E0098AFFF /* icons in Resources */,
+				D771868C30A4326E0098AFFF /* manifest.json in Resources */,
+				D771868730A4326E0098AFFF /* popup.js in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D771864C30A4326D0098AFFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				D771866030A4326D0098AFFF /* ViewController.swift in Sources */,
+				D771865430A4326D0098AFFF /* AppDelegate.swift in Sources */,
+			);
+		};
+		D771866730A4326E0098AFFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				D771867130A4326E0098AFFF /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D771866E30A4326E0098AFFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D771866A30A4326E0098AFFF /* Shield Extension */;
+			targetProxy = D771866D30A4326E0098AFFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D771865630A4326D0098AFFF /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D771865730A4326D0098AFFF /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		D771866130A4326D0098AFFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D771866230A4326D0098AFFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D771867330A4326E0098AFFF /* Debug configuration for PBXProject "Shield" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D771867430A4326E0098AFFF /* Release configuration for PBXProject "Shield" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D771867630A4326E0098AFFF /* Debug configuration for PBXNativeTarget "Shield Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shield Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.3.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D771867730A4326E0098AFFF /* Release configuration for PBXNativeTarget "Shield Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shield Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shield Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.3.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D771867A30A4326E0098AFFF /* Debug configuration for PBXNativeTarget "Shield" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.3.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D771867B30A4326E0098AFFF /* Release configuration for PBXNativeTarget "Shield" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66KP7KX9MX;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.3.1;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.livid.Shield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D771864B30A4326D0098AFFF /* Build configuration list for PBXProject "Shield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D771867330A4326E0098AFFF /* Debug configuration for PBXProject "Shield" */,
+				D771867430A4326E0098AFFF /* Release configuration for PBXProject "Shield" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		D771867530A4326E0098AFFF /* Build configuration list for PBXNativeTarget "Shield Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D771867630A4326E0098AFFF /* Debug configuration for PBXNativeTarget "Shield Extension" */,
+				D771867730A4326E0098AFFF /* Release configuration for PBXNativeTarget "Shield Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		D771867930A4326E0098AFFF /* Build configuration list for PBXNativeTarget "Shield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D771867A30A4326E0098AFFF /* Debug configuration for PBXNativeTarget "Shield" */,
+				D771867B30A4326E0098AFFF /* Release configuration for PBXNativeTarget "Shield" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D771864830A4326D0098AFFF /* Project object */;
+	validationLevel = 1;
+}

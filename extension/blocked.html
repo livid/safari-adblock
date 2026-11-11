@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dangerous site blocked</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #fdf3f2; --fg: #2a1512; --muted: #7a5a55; --card: #fff; --line: #f0d5d1; --danger: #c62828; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1d1211; --fg: #f6e6e3; --muted: #c3a39d; --card: #2a1a18; --line: #4a2a26; --danger: #ef5350; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+      background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 520px; width: 100%; padding: 32px; background: var(--card);
+      border: 1px solid var(--line); border-top: 4px solid var(--danger); border-radius: 12px;
+    }
+    h1 { margin: 0 0 12px; font-size: 22px; color: var(--danger); }
+    p { margin: 0 0 12px; }
+    .host {
+      margin: 16px 0; padding: 10px 12px; border-radius: 8px; background: var(--bg);
+      font-family: ui-monospace, Consolas, monospace; font-size: 14px; overflow-wrap: anywhere;
+    }
+    .muted { color: var(--muted); font-size: 14px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+    button { font: inherit; cursor: pointer; }
+    #back { padding: 10px 20px; border: 0; border-radius: 8px; background: var(--danger); color: #fff; font-weight: 600; }
+    #proceed { padding: 0; border: 0; background: none; color: var(--muted); font-size: 14px; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Dangerous site blocked</h1>
+    <p>Shield stopped this page from loading because its address is on a list of sites that spread malware, steal passwords, or hijack your computer to mine cryptocurrency.</p>
+    <div id="host" class="host"></div>
+    <p class="muted">If you got here from a link in an email or message, the safest choice is to go back.</p>
+    <div class="actions">
+      <button id="back" type="button">Go back</button>
+      <button id="proceed" type="button">Open the site anyway</button>
+    </div>
+    <p id="note" class="muted" hidden></p>
+  </main>
+  <script src="blocked.js"></script>
+</body>
+</html>
